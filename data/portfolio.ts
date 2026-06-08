@@ -66,6 +66,7 @@ export const projects: Project[] = [
     image: "/projects/exness.png",
     tech: ["Next.js", "Node.js", "Redis", "WebSockets", "AWS"],
     githubUrl: "https://github.com/jeetupal31/exness",
+    liveUrl: "http://3.226.137.174:3000",
   },
   {
     name: "AgentFlow — AI Workflow Platform",
