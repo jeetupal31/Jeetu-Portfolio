@@ -1,6 +1,6 @@
 "use client";
 
-import { BrainCircuit, DatabaseZap, Layers, ServerCog } from "lucide-react";
+import { BrainCircuit, Layers, MonitorSmartphone, ServerCog } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -23,7 +23,7 @@ const focusAreas = [
   {
     title: "Frontend Craft",
     description: "Delivering clean, accessible interfaces with premium interactions.",
-    icon: DatabaseZap,
+    icon: MonitorSmartphone,
   },
 ];
 
@@ -32,20 +32,21 @@ export function AboutSection() {
     <AnimatedSection id="about">
       <SectionHeading
         eyebrow="About Me"
-        title="Passionate about shipping thoughtful, scalable products."
-        description="I am a Full Stack Developer focused on performance, architecture, and user-centric interfaces. I enjoy breaking down hard problems and building systems that stay maintainable as they grow."
+        title="I build real-time systems that hold up in production."
+        description="Full Stack Developer specializing in low-latency, real-time web applications — and currently shipping features as a Full Stack Intern at Otulia."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.25fr_1fr]">
         <article className="glass-panel rounded-3xl p-7 sm:p-8">
           <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            My core strength sits at the intersection of backend scalability and frontend
-            clarity. I like engineering systems that are practical in production while
-            still feeling intuitive for users and teammates.
+            My core strength sits at the intersection of backend depth and frontend
+            clarity: I design WebSocket and Redis pub/sub pipelines, build secure REST
+            APIs with JWT and role-based access, and ship to AWS with Docker and CI/CD.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Beyond coding, I am a tech enthusiast who continuously sharpens skills in
-            DSA, system design, and real-world architecture patterns.
+            I&apos;ve shipped a real-time crypto trading platform, a collaborative
+            whiteboard, and a visual AI workflow engine — and I keep sharpening DSA,
+            system design, and real-world architecture along the way.
           </p>
         </article>
 

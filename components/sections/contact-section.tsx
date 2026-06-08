@@ -1,7 +1,7 @@
 "use client";
 
-import { Github, Layers3, Linkedin, Mail, Phone, Trophy, Twitter } from "lucide-react";
-import { contactEmail, contactPhone, socialLinks } from "@/data/portfolio";
+import { FileText, Github, Layers3, Linkedin, Mail, Phone, Trophy, Twitter } from "lucide-react";
+import { contactEmail, contactPhone, resumeUrl, socialLinks } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
@@ -41,6 +41,12 @@ export function ContactSection() {
             <a href={`tel:+91${contactPhone}`}>
               <Phone />
               {contactPhone}
+            </a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="rounded-full px-7">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
+              <FileText />
+              Resume
             </a>
           </Button>
         </div>

@@ -45,7 +45,7 @@ export function ProjectsSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid gap-6 md:grid-cols-2"
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {projects.map((project) => (
           <motion.div key={project.name} variants={itemVariants} whileHover={{ y: -6 }}>
@@ -79,21 +79,17 @@ export function ProjectsSection() {
                 <Button asChild className="rounded-full">
                   <a href={project.githubUrl} target="_blank" rel="noreferrer">
                     <Github />
-                    GitHub
+                    Code
                   </a>
                 </Button>
                 {project.liveUrl ? (
                   <Button asChild variant="outline" className="rounded-full">
                     <a href={project.liveUrl} target="_blank" rel="noreferrer">
                       <ExternalLink />
-                      Live
+                      Live Demo
                     </a>
                   </Button>
-                ) : (
-                  <Button variant="outline" className="rounded-full" disabled>
-                    Live Soon
-                  </Button>
-                )}
+                ) : null}
               </CardFooter>
             </Card>
           </motion.div>

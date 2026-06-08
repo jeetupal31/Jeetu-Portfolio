@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   BriefcaseBusiness,
+  Download,
   Github,
   Layers3,
   Linkedin,
@@ -11,7 +12,7 @@ import {
   Trophy,
   Twitter,
 } from "lucide-react";
-import { socialLinks } from "@/data/portfolio";
+import { resumeUrl, socialLinks } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
 
 const socialIconMap = {
@@ -63,7 +64,8 @@ export function HeroSection() {
               transition={{ duration: 0.58, delay: 0.28 }}
               className="max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
             >
-              Building scalable web apps & solving real-world problems.
+              Building production-grade, real-time web applications. Open to Full
+              Stack, Backend, and SDE roles.
             </motion.p>
           </div>
 
@@ -80,6 +82,12 @@ export function HeroSection() {
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full px-7">
+              <a href={resumeUrl} target="_blank" rel="noreferrer" download>
+                <Download className="mr-1" />
+                Download Resume
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="ghost" className="rounded-full px-7">
               <a href="#contact">Contact Me</a>
             </Button>
           </motion.div>

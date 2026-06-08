@@ -1,10 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { FileText, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { navItems } from "@/data/portfolio";
+import { navItems, resumeUrl } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -58,6 +58,12 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Button asChild size="sm" className="hidden rounded-full sm:inline-flex">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
+              <FileText className="h-4 w-4" />
+              Resume
+            </a>
+          </Button>
           <ThemeToggle />
           <Button
             variant="ghost"
@@ -92,6 +98,16 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-1 flex items-center justify-center gap-2 rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-primary-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                <FileText className="h-4 w-4" />
+                Resume
+              </a>
             </div>
           </motion.div>
         ) : null}
